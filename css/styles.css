@@ -380,7 +380,7 @@ img {
 .modal-form-btn {
   margin-top: 24px;
 }
-.checkbox-text {
+.checkbox-label {
   color: var(--subtle-text-color);
   font-size: 12px;
   font-weight: 400;
@@ -413,6 +413,11 @@ img {
   align-items: center;
   justify-content: center;
   fill: transparent;
+}
+input[type="checkbox"]:checked + .checkbox-label .checkbox-container {
+  background-color: var(--active-link-color);
+  border: none;
+  fill: var(--light-mode-background);
 }
 
 /**----------------------- Section 2 Advantages ----------------*/
