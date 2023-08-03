@@ -709,6 +709,10 @@ input[type="checkbox"]:checked + label::before {
   display: flex;
   flex-direction: row;
 }
+.subscribe-label {
+  display: flex;
+  gap: 24px;
+}
 .subscribe-input {
   display: block;
   width: 264px;
@@ -727,8 +731,7 @@ input[type="checkbox"]:checked + label::before {
 .subscribe-input::placeholder {
   color: #ffffff;
 }
-.subscribe-button-container {
-}
+
 .subscribe-button {
   font-family: "Roboto", sans-serif;
   background-color: #4d5ae5;
