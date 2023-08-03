@@ -707,12 +707,9 @@ input[type="checkbox"]:checked + label::before {
 }
 .subscribe-form {
   display: flex;
-  flex-direction: row;
-}
-.subscribe-label {
-  display: flex;
   gap: 24px;
 }
+
 .subscribe-input {
   display: block;
   width: 264px;
