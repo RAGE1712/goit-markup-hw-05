@@ -318,6 +318,7 @@ img {
   padding-right: 16px;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 40px;
 }
 .modal-input:focus {
   border-color: var(--primary-brand-color);
@@ -358,6 +359,13 @@ img {
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   resize: none;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+.modal-comment:focus {
+  border-color: #4d5ae5;
 }
 .modal-comment::placeholder {
   color: rgba(46, 47, 66, 0.4);
@@ -372,12 +380,13 @@ img {
 .modal-form-btn {
   margin-top: 24px;
 }
-.modal-policy-text {
+.checkbox-text {
   color: var(--subtle-text-color);
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17; /* 116.667% */
   letter-spacing: 0.04em;
+  color: var(--subtle-text-color);
 }
 .policy-link {
   color: var(--primary-brand-color);
@@ -388,30 +397,24 @@ img {
   text-decoration-line: underline;
 }
 .modal-policy-field {
+  margin-bottom: 24px;
   display: flex;
   gap: 8px;
 }
-input[type="checkbox"] {
-  display: none;
-}
-input[type="checkbox"] + label {
-  position: relative;
-  padding-left: 8px; /* Задаємо відступ для зображення */
-  cursor: pointer;
-}
-input[type="checkbox"] + label::before {
-  content: ""; /* Очистка текстового вмісту псевдоелемента */
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 16px; /* Рекомендований розмір для вашого SVG-зображення */
+.checkbox-container {
+  width: 16px;
   height: 16px;
-  background-image: url(//images/icons.svg#icon-zerocheckbox); /* Вказуйте правильний шлях до вашого SVG-файлу для стану "не вибрано" */
-  background-size: contain; /* Збільшувати/зменшувати розмір зображення так, щоб воно вміщалось в блок */
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
 }
-input[type="checkbox"]:checked + label::before {
-  background-image: url(//images/icons.svg#icon-checkbox); /* Вказуйте правильний шлях до вашого SVG-файлу для стану "вибрано" */
-}
+
 /**----------------------- Section 2 Advantages ----------------*/
 .advantages {
   padding: 120px 0;
@@ -747,6 +750,7 @@ input[type="checkbox"]:checked + label::before {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .subscribe-button:hover,
 .subscribe-button:focus {
